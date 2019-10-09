@@ -1,19 +1,21 @@
 {
   "name": "jsonbase-api",
-  "version": "1.0.0",
-  "main": "dist/server.js",
+  "version": "1.0.5",
   "license": "MIT",
+  "main": "dist/jsonbase-api.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/server.js",
-    "build": "babel src -d dist",
-    "serve": "node dist/server.js"
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "webpack --config webpack.config.js",
+    "serve": "node dist/main.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.3",
     "@babel/core": "^7.6.3",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"
