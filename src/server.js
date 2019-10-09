@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 const api = 'https://jsonbase.com/'
 
-let Bucket = class {
+export default class Bucket {
     constructor(name) {
         this.name = name
     }
@@ -23,9 +23,11 @@ let Bucket = class {
     }
 }
 
-let demo_bucket = new Bucket('demo_bucket');
-demo_bucket.get('joe')
-    .then(data => console.log(data))
+// Tests
+//
+// let demo_bucket = new Bucket('demo_bucket');
+// demo_bucket.get('joe')
+//     .then(data => console.log(data))
 
-demo_bucket.put('mike', {hello: 'mike'})
-    .then(data => console.log(data))
+// demo_bucket.put('mike', {hello: 'mike'})
+//     .then(data => console.log(data))
